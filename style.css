@@ -1,0 +1,444 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #1f1f1f;                                                
+}
+
+/* ------header------ */
+.H_img{
+    position: relative;
+    height: 35vh;
+    width: 100%;
+    background-size: cover;
+    background-position: top center;
+    background-image: url(img/DiabloHeader.jpg);
+}
+.HP_img{
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    background-size: cover;
+    height: 50px;
+    width: 50px;
+    background-image: url(img/boutonParametres.png);
+}
+.btn_mega_container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.btn_container{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-inline: 20px;
+    overflow: hidden;
+    border-radius: 50px 5px;
+    margin-block: 40px;
+    font-size: 40px;
+    width: 280px;
+    height: 50px;
+}
+.btn_container::before{
+    position: absolute;
+    width: 100%;
+    height: 1500%;
+    content: '';
+    background-image: conic-gradient(transparent, transparent, transparent, #FCF0D6);
+    animation: rotate_border 5s linear infinite;
+}
+.btn_container::after{
+    position: absolute;
+    width: 100%;
+    height: 1500%;
+    content: '';
+    background-image: conic-gradient(transparent, transparent, transparent, #ca2d1b);
+    animation: rotate_border 5s linear infinite;
+    animation-delay: -2.5s;
+}
+@keyframes rotate_border{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+.btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    background-color: #1f1f1f;
+    border-radius: 45px 5px;
+    border: 0;
+    padding: 10px 66px;
+    height: 92%;
+    width: 97%;
+    z-index: 10;
+}
+.btndeco{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    cursor: pointer;
+    font-family: 'Diablo', sans-serif;
+    background-color: #1f1f1f;
+    color: #FCF0D6;
+    border-radius: 45px 5px;
+    border: 0;
+    height: 92%;
+    width: 97%;
+    font-size: 27px;
+}
+.btnText{
+    font-family: 'Diablo', sans-serif;
+    text-decoration: none;
+    color: #FCF0D6;
+    font-size: 30px;
+}
+.ici:hover,
+.log:hover,
+.btndeco:hover,
+.btnText:hover{
+    color: #ca2d1b;
+}
+.container_co{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.connexion,
+.inscription{
+    margin-inline: 30px;
+}
+.form1{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-size: 30px;
+    margin-top: 40px;
+}
+.label_all_form{
+    font-family: 'Diablo', sans-serif;
+    color: #FCF0D6;
+    font-size: 25px;
+    display: flex;
+    text-align: center;
+    margin-top: 15px;
+}
+.input_all_form{
+    background-color: #1f1f1f;
+    border: 2px #ca2d1b solid;
+    color: #FCF0D6;
+    font-size: 25px;
+    display: flex;
+    text-align: center;
+    border-radius: 45px 5px;
+}
+.log {
+    font-family: 'Diablo', sans-serif;
+    background-color: #1f1f1f;
+    border: 2px #ca2d1b solid;
+    color: #FCF0D6;
+    padding: 3px;
+    font-size: 25px;
+    margin-top: 20px;
+    border-radius: 45px 5px;
+    padding-inline: 20px;
+    cursor: pointer;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+input{
+    font-size: 20px;
+}
+.infoCompte{
+    font-family: 'Diablo', sans-serif;
+    color: #FCF0D6;
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+.inscrit{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Diablo', sans-serif;
+    color: #FCF0D6;
+    margin-top: 20px;
+    font-size: 20px;
+}
+.ici{
+    font-family: 'Diablo', sans-serif;
+    color: #d1bd90;
+    text-decoration: none;
+    margin-left: 8px;
+}
+.connect{
+    display: flex;
+    justify-content: center;
+    background-color: rgba(8, 247, 0, 0.5);
+    margin-inline: 30%;
+    margin-block: 20px;
+    font-size: 30px;
+    border-radius: 15px;
+}
+.connect-error{
+    display: flex;
+    justify-content: center;
+    background-color: rgba(247, 0, 0, 0.5);
+    margin-inline: 30%;
+    margin-block: 20px;
+    font-size: 30px;
+    border-radius: 15px;
+}
+#hamburger {
+display: none;
+}
+#hamburger-logo {
+    cursor: pointer;
+    background: black;
+    width: 200px;
+    display: block;
+    color: white;
+    text-align: right;
+    transform: translateX(-168px);
+    padding: 10px;
+    border-radius: 0px 15px 15px 0px;
+}
+nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    background: black;
+    overflow: hidden;
+    width: 200px;
+    transform: translateX(-200px);
+}
+#hamburger-logo,
+nav {
+    transition: 0.7s;
+}
+#hamburger:checked ~ #hamburger-logo{
+    transform: translate(0);
+    border-radius: 0px 20px 0px 0px;
+}
+#hamburger:checked ~ nav {
+    transform: translate(0);
+    border-radius: 0px 0px 20px 0px;
+}
+nav a {
+    display: flex;
+    justify-content: center;
+    font-family: 'Diablo', sans-serif;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+}
+.btn_deco_burger:hover,
+nav a:hover {
+    color: #ca2d1b;
+}
+.btn_deco_burger{
+    font-family: 'Diablo', sans-serif;
+    background-color: black;
+    color: white;
+    border: 0;
+    font-size: 17px;
+    margin-top: 8px;
+    margin-bottom: 30px;
+    cursor: pointer;
+}
+
+@media(max-width:1000px){
+    
+    .btn_mega_container{
+      display: none;
+    }
+}
+@media(min-width:1000px){
+    
+    .menu{
+      display: none;
+    }
+}
+.TITRE{
+    display: flex;
+    justify-content: center;
+    font-size: 50px;
+    font-family: 'Diablo', sans-serif;
+    background: linear-gradient(90deg, #ca2d1b 0%, #FCF0D6 25%, #FCF0D6 50%, #FCF0D6 75%, #ca2d1b 100%);
+    background-size: 80%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    animation: animate 4s linear infinite;
+    margin-top: 50px;
+}
+@keyframes animate {
+to{
+    background-position: 400%;
+}
+}
+.container_empty_accueil{
+    display: flex;
+    justify-content: center;
+}
+.histoire1{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+.text_histoire1{
+    display: flex;
+    align-items: center;
+    font-family: 'Diablo', sans-serif;
+    font-size: 20px;
+    color: #FCF0D6;
+    text-align: center;
+    width: 650px;
+    margin-block: 50px;
+    margin-inline: 25px;
+}
+.container_img_empty_accueil{
+    display: flex;
+    align-items: center;
+    height: 374px;
+    margin-block: 50px;
+    margin-inline: 25px;
+}
+.img_menphisto_empty_accueil{
+    width: 650px;
+}
+@media(max-width:480px){
+
+    .HP_img{
+        top: 15px;
+        right: 15px;
+        height: 40px;
+        width: 40px;
+    }
+    .container_img_empty_accueil{
+        height: 180px;
+        margin-block: 25px;
+    }
+    .img_menphisto_empty_accueil,
+    .text_histoire1{
+      width: 340px;
+      margin-block: 25px;
+    }
+    .TITRE{
+        margin-top: 0px;
+        margin-bottom: 20px;
+        font-size: 30px;
+    }
+}
+
+.footer{ 
+    display: flex;
+    height: 25vh;
+    margin-top: 10%;
+    background-image: url(img/footer.png); 
+    background-size: cover;
+    background-position: center center;
+    align-items: center;
+}
+.footerText{
+    margin-left: 10%;
+    text-align: center;
+    width: 20%;
+    font-family: 'Diablo', sans-serif;
+    font-size: 5rex;
+    color: #FCF0D6;
+}
+
+
+.cards-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 200px;
+}
+.card_container{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: none;;
+    overflow: hidden;
+    border-radius: 50px 5px;
+    margin: 15px;
+    font-size: 40px;
+    width: 600px;
+    height: 600px;
+    /* max-width: 500px;
+    max-height: 700px; */
+    /* backface-visibility: hidden; */
+    
+}
+.card_container:active{
+    transform: rotatey(180deg);
+    transition: 1s;
+    
+}
+.card_container::before{
+    
+    position: absolute;
+    width: 500%;
+    height: 1500%;
+    content: '';
+    background-image: conic-gradient(transparent, transparent, transparent, #FCF0D6);
+    animation: rotate_border 5s linear infinite;
+}
+.card_container::after{
+    position: absolute;
+    width: 500%;
+    height: 1500%;
+    content: '';
+    background-image: conic-gradient(transparent, transparent, transparent, #ca2d1b);
+    animation: rotate_border 5s linear infinite;
+    animation-delay: -2.5s;
+}
+.card{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    content: '';
+    background-color: #1f1f1f;
+    border-radius: 46px 5px;
+    /* inset: 5px; */
+    padding: 10px;
+    z-index: 10;
+    height: 99%;
+    width: 99%;
+    font-family: 'Diablo', sans-serif;
+    color: #FCF0D6;
+}
+
+.nom_classes{
+    display: flex;
+    justify-content: center;
+
+}
+.comp_nom{
+
+    margin-top: 30px;
+    font-size: 25px;
+}
+.comp_descri{
+    font-size: 15px;
+
+}
+
+
+
